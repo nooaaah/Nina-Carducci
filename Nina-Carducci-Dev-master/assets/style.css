@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./fonts/Inter_28pt-Regular.woff2') format('woff2');
+  src: url('./fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
 }
 
 /* Add Inter Bold */
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('./fonts/Inter_28pt-Bold.woff2') format('woff2');
+  src: url('./fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
 }
 
 @font-face {
