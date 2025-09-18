@@ -159,7 +159,7 @@
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
-      /** Récupération de l'élément actif */
+     
       let activeImage = null;
       $("img.gallery-item").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
@@ -169,7 +169,7 @@
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
 
 
-      /** ---- Construction du tableau de comparaison ---- */
+      
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
@@ -189,37 +189,25 @@
         });
       }
 
-      /** Comparaison et récupération de l'index de la photo suivante */
+      
       let index = 0,
       next = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i + 1; // On incrémente l'index pour passer à l'image suivante
+          index = i + 1; 
         }
       });
 
-      /** Version vanilla */
-      // imagesCollection.forEach((img, i) => {
-      //   if (activeImage.src === img.src) {
-      //     index = i + 1;
-      //   }
-      // });
+      
+      next = imagesCollection[index] || imagesCollection[0]; 
 
-      /** Vérification de l'existernce de l'index sinon retour au début */
-      next = imagesCollection[index] || imagesCollection[0]; // Code ternernaire
-
-      /** Version decomposée */
-      // if (imagesCollection[index]) {
-      //   next = imagesCollection[index]
-      // } else {
-      //   next = imagesCollection[0];
-      // }
+      
 
 
-      /** Injection de la source du next */
+      
       $(".lightboxImage").attr("src", $(next).attr("src"));
-      // document.querySelector(".lightboxImage").src = next.src;
+      
 
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -267,7 +255,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("nav-link active active-tag"); //couleurs boutons filtres
+      $(this).addClass("nav-link active active-tag"); 
 
       var tag = $(this).data("images-toggle");
 

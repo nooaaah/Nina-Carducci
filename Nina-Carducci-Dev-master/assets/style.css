@@ -6,7 +6,7 @@
   src: url('./fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
 }
 
-/* Add Inter Bold */
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -23,7 +23,6 @@
   src: url('./fonts/Spectral-Regular.woff2') format('woff2');
 }
 
-/* Add Spectral Bold */
 @font-face {
   font-family: 'Spectral';
   font-style: normal;
